@@ -1,0 +1,22 @@
+[
+  {
+    "query_id": "1",
+    "query_name": "test1",
+    "query": "q=price:[100 TO 200]"
+  },
+  {
+    "query_id": "2",
+    "query_name": "test2",
+    "query": "q=price:[200 TO 300]"
+  },
+  {
+    "query_id": "3",
+    "query_name": "test3",
+    "query": "q=price:[300 TO 400]"
+  },
+  {
+    "query_id": "3",
+    "query_name": "duplicate ID",
+    "query": "q=price:[300 TO 400]"
+  }
+]

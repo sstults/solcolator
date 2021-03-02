@@ -1,0 +1,8 @@
+rootProject.name = 'solcolator'
+include 'collection-writer'
+include 'file-reader'
+include 'file-writer'
+include 'kafka-writer'
+include 'solcolator-api'
+include 'solcolator-update-processor'
+

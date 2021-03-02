@@ -1,0 +1,15 @@
+plugins {
+    id 'java'
+}
+
+group 'org.apache.solr'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.apache.solr:solr-core:8.8.1'
+    implementation 'org.apache.solr:solr-solrj:8.8.1'
+}

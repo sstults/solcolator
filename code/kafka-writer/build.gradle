@@ -1,0 +1,17 @@
+plugins {
+    id 'java'
+}
+
+group 'org.apache.solr'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation project(':solcolator-api')
+    implementation "org.apache.solr:solr-solrj:$solrVersion"
+    implementation "org.slf4j:slf4j-api:$slf4jVersion"
+    implementation "org.apache.kafka:kafka-clients:$kafkaVersion"
+}

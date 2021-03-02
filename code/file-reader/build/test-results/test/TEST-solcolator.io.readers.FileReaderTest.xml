@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="solcolator.io.readers.FileReaderTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2021-03-02T08:40:18" hostname="vvvw.local" time="0.108">
+  <properties/>
+  <testcase name="shouldReadByQueryId()" classname="solcolator.io.readers.FileReaderTest" time="0.082"/>
+  <testcase name="shouldThrowExceptionIfFilePathDoesNotExist()" classname="solcolator.io.readers.FileReaderTest" time="0.002"/>
+  <testcase name="shouldReturnEmptyListIfNotInitialized()" classname="solcolator.io.readers.FileReaderTest" time="0.001"/>
+  <testcase name="shouldNotThrowOnClose()" classname="solcolator.io.readers.FileReaderTest" time="0.002"/>
+  <testcase name="shouldThrowExceptionWhenFileMalformed()" classname="solcolator.io.readers.FileReaderTest" time="0.004"/>
+  <testcase name="shouldThrowExceptionIfFilePathNotSet()" classname="solcolator.io.readers.FileReaderTest" time="0.002"/>
+  <testcase name="shouldThrowExceptionIfQueryIdNotFound()" classname="solcolator.io.readers.FileReaderTest" time="0.003"/>
+  <testcase name="shouldThrowExceptionIfDuplicateQueryIdFound()" classname="solcolator.io.readers.FileReaderTest" time="0.003"/>
+  <testcase name="shouldReadAllQueries()" classname="solcolator.io.readers.FileReaderTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

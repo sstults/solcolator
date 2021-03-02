@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+}
+
+group 'org.apache.solr'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation project(':solcolator-api')
+    implementation "org.apache.solr:solr-solrj:$solrVersion"
+    implementation "org.apache.solr:solr-core:$solrVersion"
+    implementation "org.apache.lucene:lucene-core:$solrVersion"
+    implementation "org.apache.lucene:lucene-monitor:$solrVersion"
+    implementation "org.apache.lucene:lucene-analyzers-common:$solrVersion"
+    implementation "org.slf4j:slf4j-api:$slf4jVersion"
+    implementation "com.github.flaxsearch:luwak:$junitVersion"
+}
