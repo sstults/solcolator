@@ -1,6 +1,0 @@
-[
-  {
-    "query_id": "1",
-    "query_name": "test1",
-    "query": "q=price:[100 TO 200]"
-  }
