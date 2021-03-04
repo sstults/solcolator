@@ -17,5 +17,4 @@ dependencies {
     implementation "org.apache.lucene:lucene-monitor:$solrVersion"
     implementation "org.apache.lucene:lucene-analyzers-common:$solrVersion"
     implementation "org.slf4j:slf4j-api:$slf4jVersion"
-    implementation "com.github.flaxsearch:luwak:$junitVersion"
 }
