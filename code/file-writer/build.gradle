@@ -9,10 +9,17 @@ repositories {
     mavenCentral()
 }
 
+configurations {
+    testImplementation {
+        exclude group: 'org.apache.logging.log4j', module: 'log4j-slf4j-impl'
+    }
+}
+
 dependencies {
     implementation project(':solcolator-api')
     implementation "org.apache.solr:solr-solrj:$solrVersion"
     implementation "org.slf4j:slf4j-api:$slf4jVersion"
     implementation "com.google.code.gson:gson:$gsonVersion"
     implementation "com.google.guava:guava-base:$guavaVersion"
+    testImplementation "io.github.hakky54:logcaptor:2.4.0"
 }
