@@ -1,19 +1,18 @@
 package solcolator.io.writers;
 
-import java.io.IOException;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
-
 import org.apache.solr.client.solrj.SolrServerException;
 import org.apache.solr.client.solrj.impl.CloudSolrClient;
 import org.apache.solr.common.SolrInputDocument;
 import org.apache.solr.common.util.NamedList;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import solcolator.io.api.ISolcolatorResultsWriter;
+
+import java.io.IOException;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
 
 /**
  * NOTE! IT'S A BASIC IMPLEMENTATION ONLY. DON'T USE THIS WRITER IN PRODUCTION ENVIRONMENT WITHOUT ADDITIONAL TESTS!
@@ -24,7 +23,7 @@ import solcolator.io.api.ISolcolatorResultsWriter;
  * Collection Writer Config:
     <lst>
 		<str name="class">solcolator.io.writers.CollectionWriter</str>
-		<str name="zookeepers">[comma separated list of zookeepers with ports]</str>
+		<str name="solrUrls">[comma separated list of Solr URLs, eg: "http://solr1:8983/solr"]</str>
 		<str name="collectionName">[collection name]</str>
 		<str name="collectionFl">[comma separated list of fields are separated]</str>
 	</lst>
@@ -32,18 +31,18 @@ import solcolator.io.api.ISolcolatorResultsWriter;
  */
 public class CollectionWriter implements ISolcolatorResultsWriter {
 	private static final Logger log = LoggerFactory.getLogger(CollectionWriter.class);
-	private static final String ZOOKEEPERS = "zookeepers";
 	private static final String COLLECTION_NAME = "collectionName";
 	private static final String COLLECTION_FL = "collectionFl";
+	public static final String SOLR_URLS = "solrUrls";
 	
 	private List<String> fl;
 	private CloudSolrClient solrClient;
 
-	public void init(NamedList<?> outputConfig) throws IOException {
-		String zookeepers = (String) outputConfig.get(ZOOKEEPERS);
+	public void init(NamedList<?> outputConfig) {
+		String solrUrls = (String) outputConfig.get(SOLR_URLS);
 		String collection = (String) outputConfig.get(COLLECTION_NAME);
 		this.fl = Arrays.asList(((String) outputConfig.get(COLLECTION_FL)).split(","));
-		this.solrClient = new CloudSolrClient.Builder().withZkHost(Arrays.asList(zookeepers.split(","))).build();
+		this.solrClient = new CloudSolrClient.Builder(Arrays.asList(solrUrls.split(","))).build();
 		this.solrClient.setDefaultCollection(collection);
 	}
 
