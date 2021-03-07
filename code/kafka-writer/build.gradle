@@ -5,8 +5,14 @@ plugins {
 group 'org.apache.solr'
 version '1.0-SNAPSHOT'
 
-repositories {
-    mavenCentral()
+ext {
+    kafkaVersion = '2.6.0'
+}
+
+configurations {
+    testImplementation {
+        exclude group: 'org.apache.logging.log4j', module: 'log4j-slf4j-impl'
+    }
 }
 
 dependencies {
@@ -14,4 +20,7 @@ dependencies {
     implementation "org.apache.solr:solr-solrj:$solrVersion"
     implementation "org.slf4j:slf4j-api:$slf4jVersion"
     implementation "org.apache.kafka:kafka-clients:$kafkaVersion"
+    testImplementation "org.slf4j:slf4j-nop:$slf4jVersion"
+    testImplementation "org.apache.kafka:kafka_2.12:$kafkaVersion"
+    testImplementation "com.salesforce.kafka.test:kafka-junit5:3.2.2"
 }
