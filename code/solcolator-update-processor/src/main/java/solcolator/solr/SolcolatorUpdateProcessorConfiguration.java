@@ -7,7 +7,7 @@ import solcolator.config.ConfigField;
 import solcolator.config.ConfigFieldType;
 import solcolator.config.SolrConfigurationInitializationException;
 import solcolator.config.SolrPluginConfigurationBase;
-import solcolator.luwak.LuwakMatcherFactory;
+import solcolator.monitor.LuwakMatcherFactory;
 
 import java.util.List;
 

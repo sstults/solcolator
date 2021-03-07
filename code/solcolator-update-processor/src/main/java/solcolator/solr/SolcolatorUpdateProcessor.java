@@ -18,8 +18,8 @@ import org.apache.solr.update.processor.UpdateRequestProcessor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import solcolator.io.api.ISolcolatorResultsWriter;
-import solcolator.luwak.LuwakMatcherFactory;
-import solcolator.luwak.LuwakQueriesManager;
+import solcolator.monitor.LuwakMatcherFactory;
+import solcolator.monitor.LuwakQueriesManager;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -75,7 +75,7 @@ public class SolcolatorUpdateProcessor extends UpdateRequestProcessor {
 			log.info(String.format("ParallelMatcher matched %d items in %d ms", documentsList.size(),
 					System.currentTimeMillis() - start));
 		} catch (Exception e) {
-			log.error("Failed to match luwak documents", e);
+			log.error("Failed to match monitor documents", e);
 		} finally {
 			log.info("Finish to match docs through solcolator");
 		}
@@ -214,7 +214,7 @@ public class SolcolatorUpdateProcessor extends UpdateRequestProcessor {
 			luwakDocs.add(luceneDoc);
 			solrDocs.put(itemId, cmd.getSolrInputDocument());
 		} catch (Exception e) {
-			String errMessage = String.format("Failed to build luwak document for item_id:%s", itemId);
+			String errMessage = String.format("Failed to build monitor document for item_id:%s", itemId);
 			log.error(errMessage, e);
 		}
 

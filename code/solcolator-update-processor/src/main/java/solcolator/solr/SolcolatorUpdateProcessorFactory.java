@@ -15,7 +15,7 @@ import solcolator.common.ScheduledTaskExecutor;
 import solcolator.io.IOFactoryWithReflection;
 import solcolator.io.api.IQueryReader;
 import solcolator.io.api.ISolcolatorResultsWriter;
-import solcolator.luwak.LuwakQueriesManager;
+import solcolator.monitor.LuwakQueriesManager;
 
 import java.util.List;
 import java.util.Map;

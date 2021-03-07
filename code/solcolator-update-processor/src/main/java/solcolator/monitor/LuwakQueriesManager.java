@@ -1,4 +1,4 @@
-package solcolator.luwak;
+package solcolator.monitor;
 
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.monitor.Monitor;

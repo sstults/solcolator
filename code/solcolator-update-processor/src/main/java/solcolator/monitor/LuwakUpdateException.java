@@ -1,4 +1,4 @@
-package solcolator.luwak;
+package solcolator.monitor;
 
 import java.util.List;
 import java.io.IOException;

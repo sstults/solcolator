@@ -7,8 +7,8 @@ import org.apache.solr.request.SolrQueryRequest;
 import org.apache.solr.response.SolrQueryResponse;
 import solcolator.common.SolrUtils;
 import solcolator.io.api.SolcolatorQuery;
-import solcolator.luwak.LuwakQueriesManager;
-import solcolator.luwak.LuwakQuery;
+import solcolator.monitor.LuwakQueriesManager;
+import solcolator.monitor.LuwakQuery;
 
 import java.util.Arrays;
 import java.util.HashMap;

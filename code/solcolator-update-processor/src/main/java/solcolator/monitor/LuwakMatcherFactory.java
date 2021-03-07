@@ -1,4 +1,4 @@
-package solcolator.luwak;
+package solcolator.monitor;
 
 import java.util.Arrays;
 
@@ -26,7 +26,7 @@ public enum LuwakMatcherFactory {
 			}
 		}
 		
-		throw new Exception(String.format("Not existing luwak matcher factory - %s. Legal kinds: %s",
+		throw new Exception(String.format("Not existing monitor matcher factory - %s. Legal kinds: %s",
 				kindName, Arrays.asList(LuwakMatcherFactory.values())));
 	}
 }
